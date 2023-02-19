@@ -1,17 +1,15 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Image } from 'antd';
-import pokemonLogoS from './assets/images/pokedex.png';
-import { Button } from '@main';
-import { log } from './utils';
+import { PokemonInfoPage, SearchPage } from '@main';
 
 function App() {
-  log('Hello');
   return (
-    <div className="App">
-      <h1>Hello</h1>
-      <Image width={200} src={pokemonLogoS} />
-      <Button type="primary">Click me</Button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SearchPage />} />
+        <Route path="pokemon" element={<PokemonInfoPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
