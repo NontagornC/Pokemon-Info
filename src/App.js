@@ -1,8 +1,11 @@
-import "./App.css";
-import { Button, Image } from "antd";
-import pokemonLogoS from "./assets/images/pokedex.png";
+import './App.css';
+import { Image } from 'antd';
+import pokemonLogoS from './assets/images/pokedex.png';
+import { Button } from '@main';
+import { log } from './utils';
 
 function App() {
+  log('Hello');
   return (
     <div className="App">
       <h1>Hello</h1>
