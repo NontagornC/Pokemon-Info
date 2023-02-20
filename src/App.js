@@ -1,10 +1,15 @@
-import "./App.css";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import { PokemonInfoPage, SearchPage } from '@main';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SearchPage />} />
+        <Route path="pokemon" element={<PokemonInfoPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
